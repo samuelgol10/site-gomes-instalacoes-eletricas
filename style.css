@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+header {  
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color:orange;
+}
+div.logotipo{
+  
+  display: flex; 
+  
+
+}
+nav ul  {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    
+    
+}
+nav li a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    padding: 50px;
+
+}
+nav a{
+    display: flex;
+    
+    
+}nav a:hover{
+
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+}
+div.menu-burguer{ 
+    display: none;
+    cursor: pointer;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    margin: 30px;
+}
+p{
+    display: flex;
+    text-align: center;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    
+    
+}
+div.container{
+     display: grid;
+     grid-template-columns: auto auto auto;
+     grid-template-rows: auto auto auto;
+     background-color: white;
+     text-align: center;
+     
+     
+}
+div.cards{
+    background-color:orange;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    border-radius: 45px;
+    margin: 50px;
+
+}div.cards> img{
+    align-items: center;
+    justify-content: center;
+    width: 50%;   
+}
+button{
+    width: 200px;
+    height: 50px;
+    border-radius: 45px;
+    
+    
+}button:hover{
+    cursor: pointer;
+    background-color: orange;
+
+}
+form , legend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    
+}
+div.rodapé{
+    background-color: orange;
+}
+footer#redes-sociais{
+    display: flex;
+    background-color: orange;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+footer#redes-sociais img {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    
+
+}footer#redes-sociais img:hover{
+    border: 5px solid white;
+    align-items: center;    
+}

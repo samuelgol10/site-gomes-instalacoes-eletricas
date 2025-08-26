@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logotipo-eletrica.png" type="image/x-icon">
+</head>
+<header>
+    <div class="logotipo">
+        <img src="logotipo-eletrica.png" alt="logotipo-eletrica">
+        </div>
+    <nav>
+        <ul>
+        <li><a href="home.html">Home</a> </li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="servicos.html">serviços</a></li>
+        <li><a href="contato.html">Contato</a></li> 
+        </ul>
+    </nav>
+    <div class="menu-burguer">
+        <img src="fotos/menu burguer.png" alt="menu-burguer">
+        </div>
+</header>
+ <h1>
+    Fale conosco
+ </h1>
+<legend>Dados pessoais</legend>
+<form action="cadastro.php" method="post"autocomplete="on">
+    <fieldset>
+<div id="form">
+        <label for="nome">Nome:  </label>
+    <input type="text" name= "nome" id="nome" autocomplete="username" required>
+</div>
+<div id="form">
+        <label for="email">E-mail:  </label>
+    <input type="email" name="Email" id="email"  autocomplete="email" required>
+</div>
+<div id="form">
+    <label for="telefone">Telefone:</label>
+    <input type="tel" name="telefone" id="telefone"  autocomplete="tel" pattern="!\(\d{2}\)\d{4,5}--\d{4}$" required placeholder="(xx)xxxxx-xxxx">
+</div>
+<div id="form">
+    <label for="mensagem"></label>
+      <textarea name="mensagem" id="mensagem" cols="100" rows="10"></textarea>
+</div>
+<div class="input">
+    <input type="submit" value="Enviar">
+    <input type="reset" value="limpar">
+</div>
+    </fieldset>
+</form>
+    <p>  Endereço: R. Lafaiete Rodrigues, 15 - jardim-vitapolis, Itapevi - SP, 06693-280 </p>
+    <p>tel (11)96287-5402</p>
+    <p> cnpj: 35.813.055.0001-03</p>
+<footer id="redes-sociais">
+    <a href=""></a><img src="logo-facebook.jpg" alt="facebook">
+    <a href=""></a> <img src="logo-instagram.jpg" alt="instagram">
+    <a href=""></a> <img src="logo-youtube.jpg" alt="youtube">
+    <a href=""></a> <img src="logo-whatssap.jpg" alt="whatssap">
+</footer>
+</body>
+</html>
+   
