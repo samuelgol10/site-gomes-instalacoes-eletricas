@@ -1,128 +1,339 @@
+/* Importa a Fonte do Google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ================= RESET E BASE ================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
 }
-header {  
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    background-color:orange;
-}
-div.logotipo{
-  
-  display: flex; 
-  
 
+/* ================= HEADER ================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: orange;
 }
-nav ul  {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    
-    
-}
-nav li a{
-    font-size: 30px;
-    text-decoration: none;
-    color: black;
-    padding: 50px;
 
+div.logotipo {
+  display: flex;
+  align-items: center;
 }
-nav a{
-    display: flex;
-    
-    
-}nav a:hover{
 
-    cursor: pointer;
-    background-color: white;
-    border-radius: 50%;
+div.logotipo img {
+  height: 100%;
 }
-div.menu-burguer{ 
-    display: none;
-    cursor: pointer;
-}
-h1{
-    text-align: center;
-    font-size: 50px;
-    margin: 30px;
-}
-p{
-    display: flex;
-    text-align: center;
-    font-size: 25px;
-    align-items: center;
-    justify-content: center;
-    margin: 30px;
-    
-    
-}
-div.container{
-     display: grid;
-     grid-template-columns: auto auto auto;
-     grid-template-rows: auto auto auto;
-     background-color: white;
-     text-align: center;
-     
-     
-}
-div.cards{
-    background-color:orange;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    border-radius: 45px;
-    margin: 50px;
 
-}div.cards> img{
-    align-items: center;
-    justify-content: center;
-    width: 50%;   
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
 }
-button{
-    width: 200px;
-    height: 50px;
-    border-radius: 45px;
-    
-    
-}button:hover{
-    cursor: pointer;
-    background-color: orange;
 
+nav li a {
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  padding: 50px;
 }
-form , legend{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    
+
+nav a {
+  display: flex;
+  align-items: center;
 }
-div.rodapé{
-    background-color: orange;
+
+nav a:hover {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
 }
-footer#redes-sociais{
-    display: flex;
-    background-color: orange;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+
+div.menu-burguer,
+nav>ul>li.fechar-mobile {
+  display: none;
+  cursor: pointer;
+  padding-right: 20px;
 }
+
+/* ================= TEXTOS ================= */
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin: 30px 0;
+}
+
+p {
+  text-align: center;
+  font-size: 25px;
+  margin: 30px 0;
+}
+
+/* ================= CONTAINER E CARDS ================= */
+div.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+div.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: orange;
+  border-radius: 45px;
+  padding: 50px 20px;
+  width: 100%;
+  max-width: 300px;
+  min-height: 400px;
+  box-sizing: border-box;
+}
+
+div.cards img {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+div.cards p {
+  margin-bottom: 20px;
+}
+
+div.cards button {
+  width: 200px;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  border-radius: 45px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* ================= BOTÕES ================= */
+button:hover {
+  transform: scale(1.05);
+  transition: 0.4s ease-in-out;
+  background-color: orange;
+}
+
+/* ================= FORMULÁRIO ================= */
+form,
+legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+form fieldset {
+  border: 2px solid orange;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 800px;
+  background-color: #fff8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 15px;
+  border: 2px solid orange;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: black;
+  outline: none;
+  background-color: #fff8f0;
+}
+
+form .input {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+form .input input[type="submit"],
+form .input input[type="reset"] {
+  width: 150px;
+  padding: 12px 0;
+  border-radius: 45px;
+  border: 2px solid orange;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+
+form .input input[type="submit"]:hover,
+form .input input[type="reset"]:hover {
+  background-color: white;
+  color: orange;
+  transform: scale(1.05);
+}
+
+/* ================= RODAPÉ ================= */
+div.rodapé {
+  display: flex;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer#redes-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: orange;
+  padding: 20px 0;
+}
+
 footer#redes-sociais img {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition-duration: 0.5s;
-    
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
-}footer#redes-sociais img:hover{
-    border: 5px solid white;
-    align-items: center;    
+footer#redes-sociais img:hover {
+  border: 5px solid white;
+}
+
+/* ================= RESPONSIVO ================= */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+  nav ul {
+    display: none;
+  }
+
+  div.menu-burguer {
+    display: flex;
+    align-items: center;
+  }
+
+  div.menu-burguer img {
+    width: 64px;
+  }
+
+  nav ul.menu-mobile {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: orange;
+    padding-top: 100px;
+    /* espaço para o topo */
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav>ul.menu-mobile>li.fechar-mobile {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+  }
+
+  div.container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Smartphones maiores */
+@media (max-width: 768px) {
+  div.container {
+    grid-template-columns: 1fr;
+  }
+
+  div.menu-burguer img {
+    width: 56px;
+  }
+}
+
+/* Smartphones médios */
+@media (max-width: 500px) {
+  div.cards {
+    width: 90vw;
+  }
+
+  div.menu-burguer img {
+    width: 40px;
+  }
+}
+
+/* Celular retrato */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  div.container {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul.menu-mobile li a {
+    font-size: 30px;
+    /* mantém fonte grande */
+    padding: 20px 0;
+    /* reduz padding vertical para não cortar texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Celular paisagem */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  div.container {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  nav ul.menu-mobile {
+    flex-direction: column;
+    /* mantém empilhado */
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    /* ajusta topo para caber texto */
+    gap: 8px;
+    /* reduz gap para caber tudo */
+  }
+
+  nav ul.menu-mobile li a {
+    font-size: 30px;
+    /* mantém fonte grande */
+    padding: 4px 0;
+    /* reduz padding vertical para não cortar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav>ul.menu-mobile>li.fechar-mobile {
+    font-size: 2rem;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+  }
 }

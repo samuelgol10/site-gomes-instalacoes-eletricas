@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,57 +9,61 @@
 </head>
 <header>
     <div class="logotipo">
-        <img src="logotipo-eletrica.png" alt="logotipo-eletrica">
-        </div>
+        <img src="logotipo-eletrica.png" alt="logotipo elétrica">
+    </div>
     <nav>
-        <ul>
-        <li><a href="home.html">Home</a> </li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="servicos.html">serviços</a></li>
-        <li><a href="contato.html">Contato</a></li> 
+        <ul id="menu">
+            <li class="fechar-mobile">X</li>
+            <li><a href="home.html">Home</a> </li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
     <div class="menu-burguer">
-        <img src="fotos/menu burguer.png" alt="menu-burguer">
-        </div>
+        <!-- <a href="https://www.flaticon.com/free-icons/drawer" title="drawer icons">Drawer icons created by Boris farias - Flaticon</a> -->
+        <img src="menu-burguer.png" alt="menu burguer">
+    </div>
 </header>
- <h1>
+<h1>
     Fale conosco
- </h1>
+</h1>
 <legend>Dados pessoais</legend>
-<form action="cadastro.php" method="post"autocomplete="on">
+<form action="cadastro.php" method="post" autocomplete="on">
     <fieldset>
-<div id="form">
-        <label for="nome">Nome:  </label>
-    <input type="text" name= "nome" id="nome" autocomplete="username" required>
-</div>
-<div id="form">
-        <label for="email">E-mail:  </label>
-    <input type="email" name="Email" id="email"  autocomplete="email" required>
-</div>
-<div id="form">
-    <label for="telefone">Telefone:</label>
-    <input type="tel" name="telefone" id="telefone"  autocomplete="tel" pattern="!\(\d{2}\)\d{4,5}--\d{4}$" required placeholder="(xx)xxxxx-xxxx">
-</div>
-<div id="form">
-    <label for="mensagem"></label>
-      <textarea name="mensagem" id="mensagem" cols="100" rows="10"></textarea>
-</div>
-<div class="input">
-    <input type="submit" value="Enviar">
-    <input type="reset" value="limpar">
-</div>
+        <div id="form">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" autocomplete="username" required>
+        </div>
+        <div id="form">
+            <label for="email">E-mail: </label>
+            <input type="email" name="Email" id="email" autocomplete="email" required>
+        </div>
+        <div id="form">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone" autocomplete="tel" pattern="!\(\d{2}\)\d{4,5}--\d{4}$"
+                required placeholder="(xx)xxxxx-xxxx">
+        </div>
+        <div id="form">
+            <label for="mensagem"></label>
+            <textarea name="mensagem" id="mensagem" cols="100" rows="10"></textarea>
+        </div>
+        <div class="input">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="limpar">
+        </div>
     </fieldset>
 </form>
-    <p>  Endereço: R. Lafaiete Rodrigues, 15 - jardim-vitapolis, Itapevi - SP, 06693-280 </p>
-    <p>tel (11)96287-5402</p>
-    <p> cnpj: 35.813.055.0001-03</p>
+<p> Endereço: R. Lafaiete Rodrigues, 15 - jardim-vitapolis, Itapevi - SP, 06693-280 </p>
+<p>tel (11)96287-5402</p>
+<p> CNPJ: 35.813.055.0001-03</p>
 <footer id="redes-sociais">
-    <a href=""></a><img src="logo-facebook.jpg" alt="facebook">
-    <a href=""></a> <img src="logo-instagram.jpg" alt="instagram">
-    <a href=""></a> <img src="logo-youtube.jpg" alt="youtube">
-    <a href=""></a> <img src="logo-whatssap.jpg" alt="whatssap">
+    <a href=""><img src="logo-facebook.jpg" alt="Facebook"></a>
+    <a href=""><img src="logo-instagram.jpg" alt="Instagram"></a>
+    <a href=""><img src="logo-youtube.jpg" alt="YouTube"></a>
+    <a href="https://wa.me/5511962875402" target="_blank"><img src="logo-whatssap.jpg" alt="WhatsApp"></a>
 </footer>
+<script src="scripts.js"></script>
 </body>
+
 </html>
-   
