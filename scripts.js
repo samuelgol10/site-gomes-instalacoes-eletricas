@@ -1,55 +1,55 @@
-// seleciona o elemento com a classe .menu-burguer
 const menuBurguer = document.querySelector('.menu-burguer');
-
-// seleciona o elemento com a classe .fechar-mobile
 const fecharMenu = document.querySelector('.fechar-mobile');
-
-// seleciona o elemento com o id #menu
 const menu = document.getElementById('menu');
-
-// referência ao body do documento
 const body = document.body;
 
-// adiciona evento de clique no botão menu-burguer para abrir o menu
-menuBurguer.addEventListener('click', abrirMenuMobile);
+// variável para guardar a posição de scroll
+let scrollPos = 0;
 
-// adiciona evento de clique no botão fechar-menu para fechar o menu
-fecharMenu.addEventListener('click', fecharMenuMobile);
-
-// abre menu
 function abrirMenuMobile() {
-    // desativa rolagem do body
-    body.style.overflow = 'hidden'
-    // adiciona a classe 'menu-mobile' ao menu
+    // guarda a posição atual de scroll
+    scrollPos = window.scrollY || window.pageYOffset;
+
+    // trava o scroll
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollPos}px`;
+    body.style.left = '0';
+    body.style.right = '0';
+    body.style.overflow = 'hidden';
+    body.style.width = '100%';
+
+    // abre o menu
     menu.classList.add('menu-mobile');
-    // exibe o botão fechar-menu
     fecharMenu.style.display = 'flex';
 
-    // se a tela for maior que 1023px, esconde o botão fechar
     if (window.innerWidth > 1023) {
         fecharMenu.style.display = 'none';
     }
 }
 
-// fecha menu
 function fecharMenuMobile() {
-    // ativa rolagem do body
-    body.style.overflow = 'scroll'
-    // remove a classe 'menu-mobile' do menu
+    // libera scroll
+    body.style.position = '';
+    body.style.top = '';
+    body.style.left = '';
+    body.style.right = '';
+    body.style.overflow = '';
+    body.style.width = '';
+
+    // retorna à posição original
+    window.scrollTo(0, scrollPos);
+
+    // fecha menu
     menu.classList.remove('menu-mobile');
-    // esconde o botão fechar-menu
     fecharMenu.style.display = 'none';
 }
 
-// reset ao mudar o tamanho da tela
+menuBurguer.addEventListener('click', abrirMenuMobile);
+fecharMenu.addEventListener('click', fecharMenuMobile);
+
 window.addEventListener('resize', () => {
-    // se a tela for maior que 1023px
     if (window.innerWidth > 1023) {
-        // ativa rolagem do body
-        body.style.overflow = 'scroll'
-        // remove a classe 'menu-mobile' do menu
-        menu.classList.remove('menu-mobile');
-        // esconde o botão fechar-menu
-        fecharMenu.style.display = 'none';
+        fecharMenuMobile();
     }
 });
+
