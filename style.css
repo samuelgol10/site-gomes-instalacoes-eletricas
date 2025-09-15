@@ -54,7 +54,8 @@ nav a:hover {
   border-radius: 50%;
 }
 
-div.menu-burguer, nav > ul > li.fechar-mobile {
+div.menu-burguer,
+nav>ul>li.fechar-mobile {
   display: none;
   cursor: pointer;
   padding-right: 20px;
@@ -119,10 +120,12 @@ div.cards button {
 button:hover {
   transform: scale(1.05);
   transition: 0.4s ease-in-out;
+  background-color: orange;
 }
 
 /* ================= FORMULÁRIO ================= */
-form, legend {
+form,
+legend {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,7 +162,8 @@ form textarea {
   font-family: "Montserrat", sans-serif;
 }
 
-form input:focus, form textarea:focus {
+form input:focus,
+form textarea:focus {
   border-color: black;
   outline: none;
   background-color: #fff8f0;
@@ -240,12 +244,13 @@ footer#redes-sociais img:hover {
     width: 100vw;
     height: 100vh;
     background-color: orange;
-    padding-top: 100px; /* espaço para o topo */
+    padding-top: 100px;
+    /* espaço para o topo */
     align-items: center;
     gap: 20px;
   }
 
-  nav > ul.menu-mobile > li.fechar-mobile {
+  nav>ul.menu-mobile>li.fechar-mobile {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -286,8 +291,10 @@ footer#redes-sociais img:hover {
   }
 
   nav ul.menu-mobile li a {
-    font-size: 30px; /* mantém fonte grande */
-    padding: 20px 0; /* reduz padding vertical para não cortar texto */
+    font-size: 30px;
+    /* mantém fonte grande */
+    padding: 20px 0;
+    /* reduz padding vertical para não cortar texto */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -302,22 +309,27 @@ footer#redes-sociais img:hover {
   }
 
   nav ul.menu-mobile {
-    flex-direction: column; /* mantém empilhado */
+    flex-direction: column;
+    /* mantém empilhado */
     justify-content: center;
     align-items: center;
-    padding-top: 40px; /* ajusta topo para caber texto */
-    gap: 8px; /* reduz gap para caber tudo */
+    padding-top: 40px;
+    /* ajusta topo para caber texto */
+    gap: 8px;
+    /* reduz gap para caber tudo */
   }
 
   nav ul.menu-mobile li a {
-    font-size: 30px; /* mantém fonte grande */
-    padding: 4px 0; /* reduz padding vertical para não cortar */
+    font-size: 30px;
+    /* mantém fonte grande */
+    padding: 4px 0;
+    /* reduz padding vertical para não cortar */
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  nav > ul.menu-mobile > li.fechar-mobile {
+  nav>ul.menu-mobile>li.fechar-mobile {
     font-size: 2rem;
     top: 20px;
     right: 20px;
