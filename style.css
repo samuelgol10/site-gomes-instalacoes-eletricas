@@ -92,8 +92,8 @@ div.cards {
   border-radius: 45px;
   padding: 50px 20px;
   width: 100%;
-  max-width: 300px;
-  min-height: 400px;
+  max-width: 500px;
+  min-height: 500px;
   box-sizing: border-box;
 }
 
